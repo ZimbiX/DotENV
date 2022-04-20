@@ -69,6 +69,9 @@ contexts:
     - comment: Numeric
       match: '-?\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b'
       scope: constant.numeric.env
+    - comment: Strings (unquoted)
+      match: (?<==)[^'"#]*
+      scope: string.quoted.double.env
   escape-characters:
     - match: '\\[nrt\\\$\"\'']'
       scope: constant.character.escape.env
